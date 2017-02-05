@@ -1,0 +1,42 @@
+﻿<p>{{title}}</p>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th style="width: 52px;">
+        Employee Id<span class="glyphicon sort-icon"></span>
+      </th>
+      <th>
+        First Name<span class="glyphicon sort-icon"></span>
+      </th>
+      <th>
+        Last Name<span class="glyphicon sort-icon"></span>
+      </th>
+      <th>
+        Mobile<span class="glyphicon sort-icon"></span>
+      </th>
+      <th>
+        Address<span class="glyphicon sort-icon"></span>
+      </th>
+      <th>
+        Email<span class="glyphicon sort-icon"></span>
+      </th>
+    <th><b>Actions</b></th>
+    </tr>
+  </thead>
+ {{#each User}}
+ <tr>
+    <td name="empid">{{this.EmpId}}</td>
+    <td name="fname">{{this.Fname}}</td>
+    <td name="lname">{{this.Lname}}</td>
+    <td name="mobile">{{this.Mobile}}</td>
+    <td name="address">{{this.Address}}</td>
+    <td id="email">{{this.Email}}</td>
+    <td>
+    <span name="edit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Edit</span>         
+    <span name="delete" class="btn btn-danger">Delete</span>         
+    </td>
+  </tr>
+{{/each}}
+</table>
+
+ 
